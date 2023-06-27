@@ -28,14 +28,27 @@ namespace ToJSON
                         counter++;
                     }
                     Console.Write("Enter your choice: ");
+                    if(!int.TryParse(Console.ReadLine(), out choice))
+                    {
+                        Console.WriteLine("Invalid input!");
+                        continue;
+                    }
+                    if (choice < 0 || choice > item.Answers.Count)
+                    {
+                        Console.WriteLine("Invalid input!");
+                        continue;
+                    }
+                    else
+                    {
+                        break;
+                    }
 
-                } while (!int.TryParse(Console.ReadLine(), out choice) && choice < 4);
+                } while (true);
+
                 string result = (item.Answers[choice] == item.Answers[item.Correct]) ? "Correct answer!" : $"Wrong answer! The right answer is {item.Answers[item.Correct]}";
+
                 Console.WriteLine($"\n{result}\n{item.Description}\n");
-               
             }
         }
     }
-
-
 }

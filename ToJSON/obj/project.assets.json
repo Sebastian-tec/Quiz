@@ -61,11 +61,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sr\\source\\repos\\ToJSON\\ToJSON\\ToJSON.csproj",
+      "projectUniqueName": "C:\\Users\\sr\\Documents\\Quiz\\ToJSON\\ToJSON.csproj",
       "projectName": "ToJSON",
-      "projectPath": "C:\\Users\\sr\\source\\repos\\ToJSON\\ToJSON\\ToJSON.csproj",
+      "projectPath": "C:\\Users\\sr\\Documents\\Quiz\\ToJSON\\ToJSON.csproj",
       "packagesPath": "C:\\Users\\sr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sr\\source\\repos\\ToJSON\\ToJSON\\obj\\",
+      "outputPath": "C:\\Users\\sr\\Documents\\Quiz\\ToJSON\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
