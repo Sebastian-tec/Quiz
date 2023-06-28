@@ -17,31 +17,30 @@ namespace ToJSON
             {
 
                 int choice = 0;
-                int counter = 0;
                 do
                 {
                     Console.WriteLine(item.Question);
-                    foreach (var answer in item.Answers)
+                    for (int i = 0; i < item.Answers.Count; i++)
                     {
-                        
-                        Console.WriteLine($"[{counter}] " + answer);
-                        counter++;
+                        Console.WriteLine($"[{i}] " + item.Answers[i]);
                     }
+
                     Console.Write("Enter your choice: ");
-                    if(!int.TryParse(Console.ReadLine(), out choice))
+
+                    if (!int.TryParse(Console.ReadLine(), out choice))
                     {
                         Console.WriteLine("Invalid input!");
                         continue;
                     }
+
                     if (choice < 0 || choice > item.Answers.Count)
                     {
                         Console.WriteLine("Invalid input!");
                         continue;
                     }
-                    else
-                    {
-                        break;
-                    }
+                    
+                    break; 
+                    
 
                 } while (true);
 
