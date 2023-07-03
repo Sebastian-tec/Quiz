@@ -1,6 +1,4 @@
-﻿using System.Security.AccessControl;
-
-namespace ToJSON
+﻿namespace ToJSON
 {
     internal class Program
     {
@@ -11,21 +9,26 @@ namespace ToJSON
 
         public static void Run()
         {
-            List<Quiz> list = JsonParser.Quiz();
+            List<Quiz> list = new JsonParser().Quiz();
 
+            LoadJson(list);
+        }
+
+        private static void LoadJson(List<Quiz> list)
+        {
             foreach (Quiz item in list)
             {
 
-                int choice = 0;
+                int choice;
                 do
                 {
                     Console.WriteLine(item.Question);
                     for (int i = 0; i < item.Answers.Count; i++)
                     {
-                        Console.WriteLine($"[{i}] " + item.Answers[i]);
+                        Console.WriteLine($"[{i}] {item.Answers[i]}");
                     }
 
-                    Console.Write("Enter your choice: ");
+                    Console.Write("Enter your choice [0] [1] [2]: ");
 
                     if (!int.TryParse(Console.ReadLine(), out choice))
                     {
@@ -38,9 +41,8 @@ namespace ToJSON
                         Console.WriteLine("Invalid input!");
                         continue;
                     }
-                    
-                    break; 
-                    
+
+                    break;
 
                 } while (true);
 

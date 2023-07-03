@@ -1,22 +1,13 @@
-﻿using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 
 namespace ToJSON
 {
     internal class JsonParser
     {
-        public static List<Quiz> Quiz()
+        public List<Quiz> Quiz()
         {
             string file = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory() + "\\quiz.json"));
-            List<Quiz> quiz = JsonConvert.DeserializeObject<List<Quiz>>(file);
-            
-            return quiz;
+            return JsonConvert.DeserializeObject<List<Quiz>>(file);   
         }
     }
 
