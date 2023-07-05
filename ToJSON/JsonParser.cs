@@ -14,7 +14,7 @@ namespace ToJSON
     public class Quiz
     {
         public string Question { get; set; }
-        public List<string> Answers = new List<string>();
+        public List<string> Answers = new();
         public int Correct { get; set; }
         public string Description { get; set; }
 
